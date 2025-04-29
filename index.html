@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EARN DApp</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-black text-white font-sans">
+  <div class="max-w-xl mx-auto p-6 text-center space-y-6">
+
+    <!-- Header -->
+    <div class="flex justify-between items-center">
+      <h1 class="text-3xl font-bold">EARN</h1>
+      <button id="connectBtn" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg shadow">
+        Connect Wallet
+      </button>
+    </div>
+
+    <!-- Mint Section -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow space-y-4">
+      <h2 class="text-2xl font-semibold">Mint Tokens</h2>
+      <p class="text-sm text-gray-400">1 SOL = 1,000,000 EARN</p>
+      <input type="number" min="0.1" step="0.1" placeholder="Enter amount in SOL"
+             class="w-full p-3 rounded text-black" id="mintAmount"/>
+      <button id="mintBtn" class="w-full bg-green-600 hover:bg-green-700 px-4 py-3 rounded-lg shadow">
+        Mint Now
+      </button>
+    </div>
+
+    <!-- Invite Section -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow space-y-2">
+      <h2 class="text-xl font-semibold">Your Referral Link</h2>
+      <input readonly id="refLink" class="w-full bg-gray-700 text-sm p-2 rounded text-white"
+             value="https://yourdapp.com?ref=..." />
+      <p class="text-sm text-gray-400">Invite friends and earn 10% of their SOL mint instantly.</p>
+    </div>
+
+    <!-- Rewards Section -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow space-y-2">
+      <h2 class="text-xl font-semibold">Your Earnings</h2>
+      <p id="rewardInfo" class="text-lg font-mono">Invited: 0 users • Earned: 0 SOL</p>
+    </div>
+
+    <!-- Dividends -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow space-y-2">
+      <h2 class="text-xl font-semibold">Dividends</h2>
+      <p id="dividendInfo" class="text-sm text-gray-300">Auto-distributed every 3 minutes to holders.</p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
